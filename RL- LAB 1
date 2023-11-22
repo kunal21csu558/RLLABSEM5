@@ -1,0 +1,316 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/kunal21csu558/RLLABSEM5/blob/main/RL-%20LAB%201\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "lbwTYLBpkSu7",
+        "outputId": "e43b256b-ea3e-4eda-8bf7-f00d6bd9a250"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Python 3.10.12\n"
+          ]
+        }
+      ],
+      "source": [
+        "!python --version"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x=3\n",
+        "print(type(x))\n",
+        "print(x)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "vNmdy8NTkWFl",
+        "outputId": "c23b1d0b-9f7d-4ca0-ea37-00af61dbf640"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "<class 'int'>\n",
+            "3\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "t=True\n",
+        "f=False\n",
+        "print(type(t))\n",
+        "print(t and f)\n",
+        "print(t or f)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "VDqcJdchkWCP",
+        "outputId": "7849765d-076a-4135-8647-97252bd7100c"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "<class 'bool'>\n",
+            "False\n",
+            "True\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x=5\n",
+        "y=10\n",
+        "z=x+y\n",
+        "print(\"Addition of %s and %s is %s\"%(x,y,z))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "5u6bLgyJkV0o",
+        "outputId": "dd837f38-edf5-4c56-89b2-4f1af0eda9c3"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Addition of 5 and 10 is 15\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x=5\n",
+        "y=10\n",
+        "z=x+y\n",
+        "str=(\"Addition of {} and {} ={}\".format(x,y,z))\n",
+        "print(str)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "e26H6yeWkVuJ",
+        "outputId": "86b923f5-9f8f-414e-de79-161b165691ae"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Addition of 5 and 10 =15\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "fruits = ['apple', 'banana', 'cherry']\n",
+        "fruits.append(\"orange\")\n",
+        "print(fruits)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "kYs5TsnDkgaK",
+        "outputId": "63ead48b-910b-493c-d27e-b1b3c68c18f3"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['apple', 'banana', 'cherry', 'orange']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "nums=list(range(10))\n",
+        "nums[2:4]=[8,9]\n",
+        "print(nums)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "OhxUQbUnkgQO",
+        "outputId": "da26eed5-1cf6-419c-9c0f-3a5d74eecfd7"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[0, 1, 8, 9, 4, 5, 6, 7, 8, 9]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "animals=['cat','dog','monkey']\n",
+        "for animal in animals:\n",
+        "  print(animal)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "sW1fvvJkkkuZ",
+        "outputId": "bc9c5cd6-f45f-4331-e894-a89fd2eec2f5"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "cat\n",
+            "dog\n",
+            "monkey\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "animals=['cat','dog','monkey']\n",
+        "for idx,animal in enumerate (animals):\n",
+        "  print('#{}: {}'.format(idx + 1,animal))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "UPor9ilokklh",
+        "outputId": "c35f41b2-f062-480c-d7e7-47acfde3ed6d"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "#1: cat\n",
+            "#2: dog\n",
+            "#3: monkey\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "nums=list(range(11))\n",
+        "squares= []\n",
+        "for x in nums:\n",
+        "    squares.append(x**2)\n",
+        "print(squares)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "f55F__ntkkhz",
+        "outputId": "05eb019c-fdec-4b66-958f-e4ece8d1ace1"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "nums=list(range(11))\n",
+        "even_squares=[x**2 for x in nums if x%2==0]\n",
+        "print(even_squares)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "x_BmNUzukvAC",
+        "outputId": "976913c5-e5d8-4945-cba5-7eca2f2536e7"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[0, 4, 16, 36, 64, 100]\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
